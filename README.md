@@ -1,1 +1,1 @@
-# open-to-intern-mean
+# open-to-intern-es6
