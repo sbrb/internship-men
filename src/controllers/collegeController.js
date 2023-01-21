@@ -33,7 +33,6 @@ export const createCollege = async (req, res) => {
         return res.status(201).send({ status: true, message: `'${name}' College register successfully.`, data: data });
     }
     catch (err) {
-        console.log(err);
         return res.status(500).send({ status: false, message: err.message });
     }
 };
@@ -41,7 +40,6 @@ export const createCollege = async (req, res) => {
 //getCollege
 export const getCollege = async (req, res) => {
     try {
-        // res.setHeader('Access-Control-Allow-Origin', '*')
         const name = req.query.collegeName;
         if (!name) return res.status(400).send({ status: false, massage: 'collegeName is required for query.' });
         if (!isValidFullName(name)) return res.status(400).send({ status: false, message: `'${name}' this college name isn't valid.` });
@@ -62,7 +60,6 @@ export const getCollege = async (req, res) => {
         return res.status(200).send({ status: true, data: data });
     }
     catch (err) {
-        console.log(err);
         return res.status(500).send({ status: false, error: err.message });
     }
 };

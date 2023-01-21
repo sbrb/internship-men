@@ -5,7 +5,6 @@ import { isValidBody, isValidFullName, isValidEmail, isValidMobile } from '../ut
 //createInterns
 export const createInterns = async (req, res) => {
     try {
-        // res.setHeader('Access-Control-Allow-Origin', '*')
         let reqBody = req.body;
         const { name, email, mobile, collegeName } = reqBody;
         
@@ -44,7 +43,6 @@ export const createInterns = async (req, res) => {
         return res.status(201).send({ status: true, message: ` '${name}' intern created successfully.`, data: data });
     }
     catch (err) {
-        console.log(err);
         return res.status(500).send({ status: false, message: err.message });
     }
 };

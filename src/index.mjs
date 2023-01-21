@@ -1,15 +1,10 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import multer from 'multer';
-import cors from 'cors';
 import route from './routes/router.js';
 import 'dotenv/config';
 const app = express();
 
 app.use(express.json())
-app.use(multer().any());
-app.use(cors())
-
 const PORT = process.env.PORT
 
 mongoose.connect(process.env.DB, {
