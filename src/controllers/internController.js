@@ -43,7 +43,6 @@ const createInterns = async (req, res) => {
         return res.status(201).send({ status: true, message: ` '${name}' intern created successfully.`, data: data });
     }
     catch (err) {
-        console.log(err);
         return res.status(500).send({ status: false, message: err.message });
     }
 };
