@@ -1,14 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const multer = require('multer');
-const cors = require('cors');
 const route = require('./routes/router.js');
 require('dotenv/config');
 const app = express();
 
 app.use(express.json());
-app.use(multer().any());
-app.use(cors());
 
 const PORT = process.env.PORT;
 

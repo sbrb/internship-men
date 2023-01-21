@@ -41,7 +41,6 @@ const createCollege = async (req, res) => {
 //getCollege
 const getCollege = async (req, res) => {
     try {
-        // res.setHeader('Access-Control-Allow-Origin', '*')
         const name = req.query.collegeName;
         if (!name) return res.status(400).send({ status: false, massage: 'collegeName is required for query.' });
         if (!isValidFullName(name)) return res.status(400).send({ status: false, message: `'${name}' this college name isn't valid.` });

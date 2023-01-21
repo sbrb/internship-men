@@ -5,7 +5,6 @@ const { isValidBody, isValidFullName, isValidEmail, isValidMobile } = require('.
 //createInterns
 const createInterns = async (req, res) => {
     try {
-        // res.setHeader('Access-Control-Allow-Origin', '*')
         let reqBody = req.body;
         const { name, email, mobile, collegeName } = reqBody;
 
