@@ -33,7 +33,6 @@ const createCollege = async (req, res) => {
         return res.status(201).send({ status: true, message: `'${name}' College register successfully.`, data: data });
     }
     catch (err) {
-        console.log(err);
         return res.status(500).send({ status: false, message: err.message });
     }
 };
@@ -61,7 +60,6 @@ const getCollege = async (req, res) => {
         return res.status(200).send({ status: true, data: data });
     }
     catch (err) {
-        console.log(err);
         return res.status(500).send({ status: false, error: err.message });
     }
 };
